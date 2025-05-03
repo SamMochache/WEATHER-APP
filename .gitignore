@@ -1,0 +1,12 @@
+#virtual environment
+/weather
+
+#environment variable
+.env
+
+#pycache
+__pycache__/
+
+#migration files
+migrations/
+
