@@ -12,4 +12,7 @@ export default defineConfig({
     namedExports: true, // enable named exports for JSON files
     stringify: false,    // stringify JSON files
   },
+  build: {
+    chunkSizeWarningLimit: 1000, // set to 1000 KB or higher
+  },
 })
