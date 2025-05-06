@@ -77,35 +77,19 @@ cd frontend
 npm install
 Create .env
 env
-Copy
-Edit
+
 VITE_API_BASE_URL=https://your-backend.onrender.com
 Start React app
-bash
-Copy
-Edit
 npm run dev
 ☁️ Hosting on Render
 Backend (Django)
 Create new Web Service
 
 Build Command:
-
-bash
-Copy
-Edit
 pip install -r requirements.txt && python manage.py collectstatic --noinput
 Start Command:
-
-bash
-Copy
-Edit
 gunicorn backend.wsgi
 Set Environment Variables:
-
-ini
-Copy
-Edit
 DEBUG=False
 SECRET_KEY=your-django-secret
 Make sure whitenoise, gunicorn, and CORS are configured
@@ -114,16 +98,10 @@ Frontend (React)
 Create new Static Site
 
 Build Command:
-
-bash
-Copy
-Edit
 npm install && npm run build
 Publish Directory:
 
 nginx
-Copy
-Edit
 dist
 Add Env Var:
 
@@ -167,9 +145,9 @@ React + Vite	Django	Render	OpenWeatherMap, Unsplash
 Bootstrap 5	Gunicorn + Whitenoise		
 
 👤 Author
-Your Name
-📫 [your@email.com]
-🌐 your-portfolio.com
+Sam Mochache
+📫 [Sammochache01@email.com]
+🌐 https://thread-6im3.onrender.com/#home
 🐙 GitHub
 
 📄 License
