@@ -56,7 +56,7 @@ MIDDLEWARE = [
 ]
 CORS_ALLOWED_ORIGINS = [
     os.getenv('CORS_ALLOWED_ORIGIN', 'http://localhost:5173'),  # Your local dev frontend URL
-    'https://weather-ef4r.onrender.com/',  # Add the Render URL for your backend
+    'https://weather-app-zs7c.onrender.com',  # Add the Render URL for your backend
 ]
 
 
