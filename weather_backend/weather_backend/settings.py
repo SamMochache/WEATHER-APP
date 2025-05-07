@@ -25,9 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Load from .env
 SECRET_KEY = os.getenv("SECRET_KEY", "your-default-secret-key")
 DEBUG = os.getenv("DEBUG", "False").lower() == "true"
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://weather-ef4r.onrender.com']
 OPENWEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY")
-VITE_API_BASE_URL = os.getenv("VITE_API_BASE_URL", "http://localhost:8000")
 # Application definition
 
 INSTALLED_APPS = [
