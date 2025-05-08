@@ -128,31 +128,70 @@ function App() {
     <small>Humidity</small>
   </div>
 </div>
+<div className="mt-4 border-top pt-4">
+  <h5 className="text-secondary mb-3">
+    📊 <span className="fw-bold">Weather Insights</span>
+  </h5>
+  <div className="row row-cols-1 row-cols-md-2 g-3">
+    <div className="col">
+      <div className="p-3 rounded shadow-sm bg-light d-flex align-items-start">
+        <i className="bi bi-emoji-sunglasses text-warning fs-3 me-3"></i>
+        <div>
+          <h6 className="mb-1">Comfort Index</h6>
+          <p className="mb-0 small text-muted">
+            {data.main.feels_like - data.main.temp >= 3
+              ? 'Hotter than it feels'
+              : 'Feels accurate'}
+          </p>
+        </div>
+      </div>
+    </div>
 
+    <div className="col">
+      <div className="p-3 rounded shadow-sm bg-light d-flex align-items-start">
+        <i className="bi bi-eye-fill text-info fs-3 me-3"></i>
+        <div>
+          <h6 className="mb-1">Visibility Quality</h6>
+          <p className="mb-0 small text-muted">
+            {data.visibility >= 8000
+              ? 'Excellent'
+              : data.visibility >= 4000
+              ? 'Moderate'
+              : 'Poor'}
+          </p>
+        </div>
+      </div>
+    </div>
 
+    <div className="col">
+      <div className="p-3 rounded shadow-sm bg-light d-flex align-items-start">
+        <i className="bi bi-wind text-secondary fs-3 me-3"></i>
+        <div>
+          <h6 className="mb-1">Wind Alert</h6>
+          <p className="mb-0 small text-muted">
+            {data.wind.speed >= 10
+              ? 'Strong winds — caution advised'
+              : 'Normal'}
+          </p>
+        </div>
+      </div>
+    </div>
 
-                {/* Simple Analytics */}
-                <div className="mt-4 border-top pt-3">
-                  <h5 className="text-secondary">📊 Weather Insights</h5>
-                  <ul className="list-unstyled small">
-                    <li>
-                      <strong>Comfort Index:</strong>{' '}
-                      {data.main.feels_like - data.main.temp >= 3 ? 'Hotter than it feels' : 'Feels accurate'}
-                    </li>
-                    <li>
-                      <strong>Visibility Quality:</strong>{' '}
-                      {data.visibility >= 8000 ? 'Excellent' : data.visibility >= 4000 ? 'Moderate' : 'Poor'}
-                    </li>
-                    <li>
-                      <strong>Wind Alert:</strong>{' '}
-                      {data.wind.speed >= 10 ? 'Strong winds — caution advised' : 'Normal'}
-                    </li>
-                    <li>
-                      <strong>Humidity Level:</strong>{' '}
-                      {data.main.humidity >= 80 ? 'High — might feel muggy' : 'Comfortable'}
-                    </li>
-                  </ul>
-                </div>
+    <div className="col">
+      <div className="p-3 rounded shadow-sm bg-light d-flex align-items-start">
+        <i className="bi bi-droplet-fill text-primary fs-3 me-3"></i>
+        <div>
+          <h6 className="mb-1">Humidity Level</h6>
+          <p className="mb-0 small text-muted">
+            {data.main.humidity >= 80
+              ? 'High — might feel muggy'
+              : 'Comfortable'}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
               </div>
             )}
           </div>
