@@ -1,9 +1,10 @@
 services:
   - type: web
     name: weather-frontend
-    env: node
-    buildCommand: "npm install && npm run build"
-    startCommand: "serve -s build"
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
     envVars:
       - key: VITE_API_BASE_URL
-        value: "https://weather-backend.onrender.com"  # Update with the correct backend URL after deployment
+        value: https://weather-backend-aagb.onrender.com
+  
