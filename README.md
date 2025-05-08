@@ -6,10 +6,8 @@ A fullstack **Weather App** using **Django (backend)** and **React with Vite (fr
 
 ## 📸 Live Demo
 
-- 🌐 **Frontend**: [https://your-frontend.onrender.com](https://your-frontend.onrender.com)
-- 🌐 **API Example**: [https://your-backend.onrender.com/api/weather?city=Nairobi](https://your-backend.onrender.com/api/weather?city=Nairobi)
-
----
+- 🌐 **Frontend**: [https://weather-frontend-p0lf.onrender.com](https://weather-frontend-p0lf.onrender.com)
+- 🌐 **API Example**: [https://weather-backend-aagb.onrender.com/api/weather?city=Nairobi](https://weather-backend-aagb.onrender.com/api/weather?city=Nairobi)
 
 ## 🧩 Project Structure
 
