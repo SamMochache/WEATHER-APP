@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import CitySearch from '../components/CitySearch';
+import mountain from '../assets/mountain.jpg';
 
 function App() {
   const [city, setCity] = useState('');
@@ -18,14 +19,20 @@ function App() {
       const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/weather?city=${cityName}`);
       const json = await res.json();
       setData(json);
+    } catch (err) {
+      console.error('Weather fetch error:', err.message);
+      setError('Failed to fetch weather data.');
+      setLoading(false);
+      return;
+    }
 
+    try {
       const imgRes = await fetch(`https://source.unsplash.com/1600x900/?${cityName}`);
       setImageUrl(imgRes.url);
     } catch (err) {
-      console.error('Fetch error:', err.message);
-      setError('Something went wrong. Check console for details.');
+      console.error('Image fetch error:', err.message);
+      setImageUrl(mountain); // Optional fallback image
     }
-
     setLoading(false);
   };
 
